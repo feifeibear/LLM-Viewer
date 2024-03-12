@@ -33,7 +33,6 @@ class ModelAnalyzer:
         assert (
             config_file is not None
         ), "config file is not found, please specify it manually."
-        print(f"use config file {config_file} for {model_id}")
         self.model_params = AutoConfig.from_pretrained(model_id, trust_remote_code=True)
         self.config = importlib.import_module(
             config_file.replace("/", ".").replace(".py", "")

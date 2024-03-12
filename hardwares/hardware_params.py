@@ -11,7 +11,7 @@ hardware_params = {
     "nvidia_A100": {"bandwidth": 1555e9, "FP16": 312e12, "INT8": 624e12, "onchip_buffer": 27648e3}, # use 40G data
     "nvidia_A100_40G": {"bandwidth": 1555e9, "FP16": 312e12, "INT8": 624e12, "onchip_buffer": 27648e3},
     "nvidia_A100_80G": {"bandwidth": 2039e9, "FP16": 312e12, "INT8": 624e12, "onchip_buffer": 27648e3},
-    "nvidia_A800_80G_SXM":{"bandwidth":2039e9, "FP16":312e12, "INT8":624e12,"onchip_buffer":27648e3},
+    "nvidia_A800_80G_SXM":{"bandwidth":2039e9, "FP16":312e12, "INT8":624e12, "onchip_buffer": 27648e3},
     "nvidia_A40": {"bandwidth": 696e9, "FP16": 149.7e12/2, "INT8": 299.3e12/2, "onchip_buffer": 21504e3},
     # https://resources.nvidia.com/en-us-tensor-core/gtc22-whitepaper-hopper
     "nvidia_H100": {"bandwidth": 3072e9, "FP16": 1979e12/2, "INT8": 3958e12/2, "onchip_buffer": 33792e3}, # use SXM data
@@ -23,6 +23,9 @@ hardware_params = {
     # Intel Skylake-X (Skylake-X, Cascade Lake) Intel Xeon Phi (Knights Landing, Knights Mill) Intel Ice Lake, Tiger Lake and Rocket Lake
     # support AVX-512 & FMA (512-bit), they has throughput of 1 cycle
     # https://www.intel.com/content/www/us/en/products/sku/230496/intel-core-i913900k-processor-36m-cache-up-to-5-80-ghz/specifications.html
-    "intel_13900k":{"bandwidth":89.6e9, "FP16":8*5.4e9*(512/16),"onchip_buffer": 36e6}
+    "intel_13900k":{"bandwidth":89.6e9, "FP16":8*5.4e9*(512/16),"onchip_buffer": 36e6},
+    "nvidia_H20":{"bandwidth":4e12, "FP16":148e12,"onchip_buffer": 36e6},
+    "nvidia_H200":{"bandwidth":4e12, "FP16":989.5e12, "INT8" : 1979, "onchip_buffer": 36e6},
+    "Gaudi2C":{"bandwidth":2.5e12, "FP16":288e12,"onchip_buffer": 36e6}
     
 }
